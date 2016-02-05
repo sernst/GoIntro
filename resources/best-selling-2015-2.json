@@ -1,0 +1,10 @@
+{
+  "make": "Chevorlet",
+  "model": "Silverado",
+  "class": "Truck",
+  "mpg": {"city": 18, "highway": 24},
+  "consumerRating": 8.5,
+  "horsePower": 355,
+  "engine": ["V6", "EcoTec3", "Flex Fuel", "4.3 liter"],
+  "source": "http://www.kbb.com/car-reviews-and-news/top-10/best-selling-cars-2015/2000012241-2/"
+}

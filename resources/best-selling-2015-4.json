@@ -1,0 +1,10 @@
+{
+  "make": "Toyota",
+  "model": "Camry",
+  "class": "Sedan",
+  "mpg": {"city": 25, "highway": 35},
+  "consumerRating": 8.2,
+  "horsePower": 178,
+  "engine": ["4 Cyl", "2.5 liter"],
+  "source": "http://www.kbb.com/car-reviews-and-news/top-10/best-selling-cars-2015/2000012241-4/"
+}

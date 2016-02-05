@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# Switch to the local directory and store that path
+pushd `dirname $0` > /dev/null
+SCRIPT_PATH=`pwd`
+
+# Create a resources path environmental variable for Go & JS to use to
+# load data from the project
+RESOURCES_PATH="${SCRIPT_PATH}/resources"
+export RESOURCES_PATH
+
+# The execution paths for this command invocation
+JS_PATH="${SCRIPT_PATH}/js/src/webServer/webServer.js"
+
+echo ""
+echo "--- ENV -----------------------------"
+
+echo "  [WORKING]: " `pwd`
+echo "[RESOURCES]: " $RESOURCES_PATH
+echo "   [JS RUN]: " $JS_PATH
+
+if [ ! -f $JS_PATH ]; then
+    echo "No matching JS file " $JS_PATH
+    echo ""
+    echo ""
+    echo ""
+    exit 0
+fi
+
+# Run the javascript application
+node $JS_PATH

@@ -1,0 +1,10 @@
+{
+  "make": "Toyota",
+  "model": "Corolla",
+  "class": "Sedan",
+  "mpg": {"city": 28, "highway": 37},
+  "consumerRating": 8.2,
+  "horsePower": 132,
+  "engine": ["4 Cyl", "1.8 liter"],
+  "source": "http://www.kbb.com/car-reviews-and-news/top-10/best-selling-cars-2015/2000012241-5/"
+}

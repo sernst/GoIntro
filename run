@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+
+# Switch to the local directory and store that path
+pushd `dirname $0` > /dev/null
+SCRIPT_PATH=`pwd`
+
+# Set the Go path to the go directory in this project
+GOPATH="${SCRIPT_PATH}/go"
+export GOPATH
+
+# Create a resources path environmental variable for Go & JS to use to
+# load data from the project
+RESOURCES_PATH="${SCRIPT_PATH}/resources"
+export RESOURCES_PATH
+
+# The execution paths for this command invocation
+GO_EXEC="${GOPATH}/bin/${1}"
+JS_PATH="${SCRIPT_PATH}/js/src/${1}/${1}.js"
+
+echo ""
+echo "--- ENV -----------------------------"
+
+echo "  [GO PATH]: " $GOPATH
+echo "  [WORKING]: " `pwd`
+echo "[RESOURCES]: " $RESOURCES_PATH
+echo "   [GO RUN]: " $GO_EXEC
+echo "   [JS RUN]: " $JS_PATH
+
+# Build and install the go example from source
+go install $1
+
+if [ "$?" -ne 0 ]; then
+  echo "GO Compile failed."
+  exit 1
+fi
+
+if [ ! -f $GO_EXEC ]; then
+    echo "GO Compile failed. File does not exist " $GO_EXEC
+    exit 1
+fi
+
+echo ""
+echo "=== GO ================================"
+echo ""
+
+# Run the compiled go application
+$GO_EXEC
+
+echo ""
+echo "=== JS ================================"
+echo ""
+
+if [ ! -f $JS_PATH ]; then
+    echo "No matching JS file " $JS_PATH
+    echo ""
+    echo ""
+    echo ""
+    exit 0
+fi
+
+# Run the javascript application
+node $JS_PATH
+
+echo ""
+echo ""
+echo ""

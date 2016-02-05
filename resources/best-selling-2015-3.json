@@ -1,0 +1,10 @@
+{
+  "make": "Dodge",
+  "model": "Ram",
+  "class": "Truck",
+  "mpg": {"city": 17, "highway": 25},
+  "consumerRating": 9.0,
+  "horsePower": 395,
+  "engine": ["V6", "Flex Fuel", "3.6 liter"],
+  "source": "http://www.kbb.com/car-reviews-and-news/top-10/best-selling-cars-2015/2000012241-3/"
+}

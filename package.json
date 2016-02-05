@@ -1,0 +1,7 @@
+{
+  "name": "Go-Introduction",
+  "version": "0.0.1",
+  "dependencies": {
+    "webworker-threads": "^0.6.2"
+  }
+}

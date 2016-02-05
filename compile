@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Switch to the local directory and store that path
+pushd `dirname $0` > /dev/null
+SCRIPT_PATH=`pwd`
+
+# Set the Go path to the go directory in this project
+GOPATH="${SCRIPT_PATH}/go"
+export GOPATH
+
+echo "  [GO PATH]: " $GOPATH
+echo "  [WORKING]: " `pwd`
+echo ""
+echo "COMPILING: ${1}"
+echo ""
+
+# Build and install the go example from source
+go install $1

@@ -1,0 +1,10 @@
+{
+  "make": "Ford",
+  "model": "F-Series",
+  "class": "Truck",
+  "mpg": {"city": 19, "highway": 26},
+  "consumerRating": 9.2,
+  "horsePower": 385,
+  "engine": ["V6", "Flex Fuel", "3.5 liter"],
+  "source": "http://www.kbb.com/car-reviews-and-news/top-10/best-selling-cars-2015/2000012241-1/"
+}
